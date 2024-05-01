@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EINZIGE9</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("X1F4DZCFc0lAmKd0e");
+   })();
+</script>
+  </head>
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)"> 
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/Enzige9 logo.png" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a href="#" class="
+            nav__link--anchor 
+            link__hover-effect 
+            link__hover-effect--black
+            ">About</a
+            >
+          </li>
+          <li class="nav__link"><a
+              href="#projects" class="
+              nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--black"
+              >Projects</a>
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a href="#" class="nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--black"
+              >Contact</a>
+          </li>
+          <li class="nav__link click"onclick="toggleContrast()"><a
+              href="#"
+              class="nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--black"
+              ><i class="fas fa-adjust"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <img src="./assets/Enzige9 logo.png" class="foto__img"alt="">
+        <div class="header__content">
+          <h1 class="title">Welcome</h1>
+          <h1 class="title green">EINZIGE9 STUDIO</h1>
+          <p class="header__para">
+            WHO we are ? <b class="green">We are Design Studio Based in Toronto </b>We offer 2D & 3D Architectural Design Services 
+              Interior , Exterior , Residential  , Condominium and Commercial .
+              Designing and finding a best solutions for our costumers. Exprienced in Interrior and Exterior Design. 
+            Working with passion for our costumers  with great user experiences.
+            <br />
+            More about  <b class="green click" onclick="toggleModal()">About US.</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://google.com"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social__link click">
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="./assets/Resume.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fas fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about us.
+          </h3>
+          <h4 class="modal__title modal__sub-title">Professional Architects Team.</h4>
+          <p class="modal__para">
+            We are  experinced <b class="green">Architects Engineers.</b> Living in Canada, working
+            around different countries in the world. <br />We currently located in Toronto doing 
+            different types of <b class="green">Interrieor and Exterior design</b> with different types of
+            Softwares.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img"
+               src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="" />
+            <span class="language__name">HTML</span>
+              </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="" />
+                <span class="language__name">CSS</span>
+              </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="" />
+                <span class="language__name">JS</span>
+              </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img"
+                src="./assets/Azure.png" alt="" />
+                <span class="language__name">AZURE</span> 
+               </figure>
+               <figure class="modal__language">
+                <img class="modal__language--img"
+                  src="./assets/jira-logo-gradient-blue-attribution_rgb@2x.png" alt="" />
+                  <span class="language__name">JIRA</span> 
+                 </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            Currently open for new opportunities.
+             </h4>
+             <form id="contact__form" onsubmit="contact(event)">
+              <div class="form__item">
+                <label class="form__item--label">Name</label>
+                <input class="input" name="user_name" type="text">
+              </div>
+              <div class="form__item">
+                <label class="form__item--label">Email</label>
+                <input class="input" name="user_email" type="email">
+                </div>
+              <div class="form__item">
+                <label class="form__item--label">Message</label>
+                <textarea class="input" name="message" type="text"></textarea>
+              </div>
+              <button id="contact__submit" class="form__submit"> 
+                Send It 
+              </button>
+             </form>
+             <div class="modal__overlay modal__overlay--loading">
+              <i class="fas fa-spinner"></i>
+             </div>
+             <div class="modal__overlay modal__overlay--success">
+              Thanks for the message! Looking forward to speaking with you soon.!
+             </div>
+            </div>
+         
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some Living Room <span class="green">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/Living1.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <img
+                  src="./assets/Living2.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <img
+                  src="./assets/Living3.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Living Room Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    ArchiCAD, Artlantis, Blender, Autocad, Lumion etc.
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit distinctio, velit animi odit veritatis
+                    exercitationem voluptatum quidem laudantium non delectus
+                    dolore omnis facere fugit ullam provident? Rem facilis
+                    laudantium impedit.
+                  </p>
+                  <div class="project__description--link">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some Bedroom <span class="green">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/Bedroom1.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <img
+                  src="./assets/Bedroom2.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <img
+                  src="./assets/Bedroom3.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Bedroom Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    ArchiCAD, Artlantis, Blender, Autocad, Lumion etc.
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit distinctio, velit animi odit veritatis
+                    exercitationem voluptatum quidem laudantium non delectus
+                    dolore omnis facere fugit ullam provident? Rem facilis
+                    laudantium impedit.
+                  </p>
+                  <div class="project__description--link">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some Kitchen <span class="green">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/Kitchen1.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <img
+                  src="./assets/Kitchen2.jpg"
+                  class="project__img"
+                  alt=""
+                />
+                <img
+                  src="./assets/Kitchen3.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Kicthen Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    ArchiCAD, Artlantis, Blender, Autocad, Lumion etc.
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit distinctio, velit animi odit veritatis
+                    exercitationem voluptatum quidem laudantium non delectus
+                    dolore omnis facere fugit ullam provident? Rem facilis
+                    laudantium impedit.
+                  </p>
+                  <div class="project__description--link">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img class="footer__logo--img" src="./assets/Enzige9 logo.png" alt="" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              GitHub
+            </a>
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+            >
+              Instagram
+            </a>
+            <a href="#"onclick="toggleModal()"
+              class="footer__social--link 
+              link__hover-effect link__hover-effect--white"
+            >
+              Contact
+            </a>
+            <a href="./assets/Resume.pdf"target="_blank"
+              class="footer__social--link 
+              link__hover-effect 
+              link__hover-effect--white"            >
+              Resume
+            </a>
+          </div>
+          <div class="address"> 2350 Dundas St West, Toronto , On . Canada    +1 6479552563   @ Einzige9@gmail.com    	www.Einzige9.com</div>
+          <div class="footer__copyright">Copyright 2023 Lemi Ahmeti</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
