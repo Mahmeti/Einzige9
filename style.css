@@ -369,7 +369,7 @@ MODAL
 }
 
 .modal__half {
-  width: 50%;
+  width: 40%;
   padding: 40px 72px;
   display: flex;
   flex-direction: column;
